@@ -10,6 +10,35 @@ body {
     overflow-x: hidden; 
 }
 
+/* Mobile First - telas pequenas primeiro */
+body {
+    font-size: 16px;
+    margin: 0;
+    padding: 0;
+}
+
+/* Tablets */
+@media (min-width: 768px) {
+    .container {
+        max-width: 750px;
+        margin: 0 auto;
+    }
+}
+
+/* Desktop */
+@media (min-width: 1024px) {
+    .container {
+        max-width: 1000px;
+    }
+}
+
+/* Large Desktop */
+@media (min-width: 1200px) {
+    .container {
+        max-width: 1200px;
+    }
+}
+
 /* HEADER */
 header {
     background-color: #000000;   
@@ -194,7 +223,7 @@ nav ul li a:hover {
 }
 
 .botao-contato:hover {
-    background-color: #0000FF;
+    background-color: #18C4B7;
     transform: translateY(-3px);
 }
 
@@ -351,7 +380,7 @@ footer {
 }
 
 .titulo-com-linha5 hr {
-    width: 30%;
+    width: 25%;
     height: 2px;
     background-color: #18C4B7;
     border: none;
@@ -508,4 +537,106 @@ textarea:focus {
     text-align: center;
     max-width: 600px;
     margin: 20px auto;
+}
+
+/* ANIMAÇÃO DE ENTRADA LENTA (igual sobre-mim) */
+.card, .card-projeto {
+    opacity: 0;
+    transform: translateY(60px);
+    transition: all 0.8s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+
+.card.animate, .card-projeto.animate {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* GRID DOS PROJETOS */
+.grid-projetos {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+    max-width: 1200px;
+    margin: 50px auto;
+    padding: 0 20px;
+}
+
+/* ESTILO DOS CARDS */
+.card-projeto {
+    background: #fff;
+    border-radius: 15px;
+    padding: 30px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+    cursor: pointer;
+}
+
+/* TÍTULOS */
+.card-projeto h3 {
+    color: #333;
+    margin-bottom: 15px;
+    font-size: 1.5em;
+}
+
+/* DESCRIÇÃO */
+.card-projeto p {
+    color: #666;
+    line-height: 1.6;
+    margin-bottom: 20px;
+}
+
+/* TECH STACK */
+.techs {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 25px;
+    flex-wrap: wrap;
+}
+
+.techs span {
+    background: linear-gradient(45deg, #18C4B7, #14A7A0);
+    color: white;
+    padding: 5px 15px;
+    border-radius: 20px;
+    font-size: 0.85em;
+    font-weight: 500;
+}
+
+/* LINKS */
+.links {
+    display: flex;
+    gap: 15px;
+}
+
+.links a {
+    flex: 1;
+    text-align: center;
+    padding: 12px 20px;
+    border-radius: 8px;
+    text-decoration: none;
+    font-weight: 600;
+    transition: all 0.4s ease;
+}
+
+.links a:first-child,
+.links a:last-child {
+    background: #18C4B7;
+    color: white;
+}
+
+.links a:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 10px 20px rgba(24,196,183,0.4);
+}
+
+/* EFEITO HOVER DO CARD */
+.card-projeto:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 20px 40px rgba(0,0,0,0.15);
+    transition: all 0.6s ease;
+}
+
+/* BOTÃO FORMULÁRIO */
+.formulario button:disabled {
+    background: #ccc;
+    cursor: not-allowed;
 }
