@@ -4,8 +4,8 @@ const projetos = [
         titulo: "Portfólio Pessoal",
         descricao: "Desenvolvimento de um portfólio responsivo com HTML, CSS e JavaScript.",
         techs: ["HTML", "CSS", "JavaScript"],
-        demo: "http://127.0.0.1:5500/projetos.html",
-        github: "https://github.com/Arthurdeaguiarr/portfolio"
+        demo: "https://arthurdeaguiarr.github.io/Portf-lio/index.html",
+        github: "https://github.com/Arthurdeaguiarr/Portf-lio"
     }
 ];
 
@@ -23,7 +23,7 @@ function carregarProjetos() {
             </div>
             <div class="links">
                 <a href="${projeto.demo}" target="_blank">Ver Demo</a>
-                <a href="${projeto.arthurdeaguiarr}" target="_blank">GitHub</a>
+                <a href="${projeto.github}" target="_blank">GitHub</a>
             </div>
         </div>
     `).join('');
