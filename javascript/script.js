@@ -6,6 +6,13 @@ const projetos = [
         techs: ["HTML", "CSS", "JavaScript"],
         demo: "https://arthurdeaguiarr.github.io/Portf-lio/index.html",
         github: "https://github.com/Arthurdeaguiarr/Portf-lio"
+    },
+    {
+        titulo: "Lista de Tarefas",
+        descricao: "Uma aplicação de lista de tarefas minimalista e funcional. O projeto foca na simplicidade e usabilidade, permitindo adicionar, concluir e excluir tarefas em uma interface limpa de página única.",
+        techs: ["HTML", "CSS", "JavaScript"],
+        demo: "https://arthurdeaguiarr.github.io/To-Do-List/",
+        github: "https://github.com/Arthurdeaguiarr/To-Do-List"
     }
 ];
 
